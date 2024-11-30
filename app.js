@@ -14,13 +14,11 @@ const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 
 // Starting conditions
-
 score0El.textContent = 0;
 score1El.textContent = 0;
 diceEl.classList.add("hidden");
 
 // Stored values
-
 let currentScore = 0;
 
 // Rolling dice functionality
@@ -32,4 +30,10 @@ btnRoll.addEventListener("click", function () {
   diceEl.classList.remove("hidden");
   diceEl.src = `dice-${dice}.png`;
   // 3. Check for rolled 1
+  if (dice !== 1) {
+    // Add dice to current score
+    currentScore += score0El; //Change to current player later
+  } else {
+    // Switch to next player
+  }
 });
