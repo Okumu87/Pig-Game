@@ -20,6 +20,7 @@ diceEl.classList.add("hidden");
 
 // Stored values
 let currentScore = 0;
+let activePlayer = 0;
 
 // Rolling dice functionality
 btnRoll.addEventListener("click", function () {
@@ -32,7 +33,8 @@ btnRoll.addEventListener("click", function () {
   // 3. Check for rolled 1
   if (dice !== 1) {
     // Add dice to current score
-    currentScore += score0El; //Change to current player later
+    currentScore += dice;
+    current0El.textContent = currentScore; //Change to current player later
   } else {
     // Switch to next player
   }
